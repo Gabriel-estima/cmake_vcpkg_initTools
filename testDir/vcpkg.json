@@ -1,9 +1,0 @@
-{
-  "dependencies": [
-    "fmt",
-    "vcpkg-cmake",
-    "vcpkg-cmake-config",
-    "raylib",
-    "eigen3"
-  ]
-}
