@@ -14,12 +14,12 @@ with the files needed to implement VCPKG library tools...
 
 ## Things to know before using:
 
-# Dependencies:
+### Dependencies:
 - Install CMAKE (using your preferred package manager)
 - Install VCPKG (if you don't have it already, go to their github repo and follow their instructions. It shouldn't be hard)
 - Install g++ (also using your preferred package manager)
 
-# What should I know before getting started?
+### What should I know before getting started?
 
 It is recommended to know the basic file structure for CMAKE projects since this repo only provides a fast start for your code.
 After that, you should add libraries, include files and manage other things as you see fit (which requires knowlege of CMAKE...).
