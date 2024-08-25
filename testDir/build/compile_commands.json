@@ -1,7 +1,0 @@
-[
-{
-  "directory": "/home/gabriel/vcpkgStuff/cmake_vcpkg_initTools/testDir/build",
-  "command": "/usr/bin/c++ -o CMakeFiles/executus.dir/jaca.cpp.o -c /home/gabriel/vcpkgStuff/cmake_vcpkg_initTools/testDir/jaca.cpp",
-  "file": "/home/gabriel/vcpkgStuff/cmake_vcpkg_initTools/testDir/jaca.cpp"
-}
-]
