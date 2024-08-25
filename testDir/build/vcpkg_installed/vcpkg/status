@@ -1,0 +1,126 @@
+Package: vcpkg-cmake-config
+Version: 2024-05-23
+Architecture: x64-linux
+Multi-Arch: same
+Abi: 943d4e81450ee793433f1b326731cf3f112868dd1408e4cc66330bb600d39b74
+Status: install ok installed
+
+Package: vcpkg-cmake
+Version: 2024-04-23
+Architecture: x64-linux
+Multi-Arch: same
+Abi: 5908c57e79ddfefd258380a532f52e444c65e6e60fcb874965e794331a2fc4d8
+Status: install ok installed
+
+Package: eigen3
+Version: 3.4.0
+Port-Version: 4
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-linux
+Multi-Arch: same
+Abi: 6dce9414e9ad97d80c4b2ece25c01f7ae93b713df9ec57c58faf10512093d617
+Description: C++ template library for linear algebra: matrices, vectors, numerical solvers, and related algorithms.
+Status: install ok installed
+
+Package: fmt
+Version: 11.0.2
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-linux
+Multi-Arch: same
+Abi: 5993c70a4692d5e349d7fe03bb1564f094fe8577423e27c4e283c1fff2fdf340
+Description: {fmt} is an open-source formatting library providing a fast and safe alternative to C stdio and C++ iostreams.
+Status: install ok installed
+
+Package: stb
+Version: 2023-04-11
+Port-Version: 1
+Architecture: x64-linux
+Multi-Arch: same
+Abi: 6563027471b49702b718bd3dd9da53c7d739f21c420db3fc2c439fcb8a085f4f
+Description: public domain header-only libraries
+Status: install ok installed
+
+Package: qoi
+Version: 2023-08-10
+Architecture: x64-linux
+Multi-Arch: same
+Abi: 80e2404235b0d1030c77656b07fc16cf788d33d505886df586e03dcc38e7cd5c
+Description: The Quite OK Image Format for fast, lossless image compression
+Status: install ok installed
+
+Package: nanosvg
+Version: 2023-12-29
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-linux
+Multi-Arch: same
+Abi: 98acbeda5bea9694033b9b5cbde981fbb13417d66a00efa220153a04af7e8edf
+Description: NanoSVG is a simple stupid single-header-file SVG parser. It is accompanied by a simple SVG rasterizer.
+Status: install ok installed
+
+Package: mmx
+Version: 2022-03-27
+Architecture: x64-linux
+Multi-Arch: same
+Abi: 56342302726d611801d724962101f9e06a822642539f4a4dc43e6fb9cc27398b
+Description: Single header libraries for C/C++
+Status: install ok installed
+
+Package: miniaudio
+Version: 0.11.21
+Architecture: x64-linux
+Multi-Arch: same
+Abi: 56c843956b4d9aab9288124b4b1e406f54a3534c7718755b36814c790c9b7d6f
+Description: Audio playback and capture library written in C, in a single source file
+Status: install ok installed
+
+Package: glfw3
+Version: 3.4
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-linux
+Multi-Arch: same
+Abi: 901ad377d41ac992a377607cfe88ae4e564814552523b7aa78ea22c06a78ab15
+Description: GLFW is a free, Open Source, multi-platform library for OpenGL, OpenGL ES and Vulkan application development. It provides a simple, platform-independent API for creating windows, contexts and surfaces, reading input, handling events, etc.
+Status: install ok installed
+
+Package: drlibs
+Version: 2023-08-16
+Architecture: x64-linux
+Multi-Arch: same
+Abi: c0357724d9922239dfa61cc04b3a733c891314b44fa8f227a33cd51ec09b06d2
+Description: Single-file audio decoding libraries for C/C++
+Status: install ok installed
+
+Package: dirent
+Version: 1.24
+Architecture: x64-linux
+Multi-Arch: same
+Abi: 728bed4d96ed674e92ec2eace09340935da0c8d544f5255bc416bc3319f471eb
+Description: Dirent is a C/C++ programming interface that allows programmers to retrieve information about files and directories under Linux/UNIX. This project provides Linux compatible Dirent interface for Microsoft Windows.
+Status: install ok installed
+
+Package: cgltf
+Version: 1.14
+Architecture: x64-linux
+Multi-Arch: same
+Abi: 5e9e069d9af007a928bd86cae1f4354a92799ca9f828ffdc3b2e387840f46490
+Description: Single-file glTF 2.0 loader and writer written in C99
+Status: install ok installed
+
+Package: raylib
+Version: 5.0
+Port-Version: 1
+Depends: cgltf, dirent, drlibs, glfw3, miniaudio, mmx, nanosvg, qoi, stb, vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-linux
+Multi-Arch: same
+Abi: 9c46c07a0ceb581b54c83fdb355672b721fdac8186bead4275280898770d19e4
+Description: A simple and easy-to-use library to enjoy videogames programming
+Default-Features: use-audio
+Status: install ok installed
+
+Package: raylib
+Feature: use-audio
+Architecture: x64-linux
+Multi-Arch: same
+Description: Build raylib with audio module
+Status: install ok installed
+

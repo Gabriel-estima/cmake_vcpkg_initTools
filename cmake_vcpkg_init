@@ -1,8 +1,8 @@
 #!/usr/bin/bash
 
-if [ $# -ne 3 ]
+if [ $# -ne 5 ]
 then
-	printf "To initiate your VCPKG and CMAKE basic project\nPlease, pass as arguments:\n1. Project name\n2. Executable name\n3. Executable source file\n"
+	printf "To initiate your VCPKG and CMAKE basic project please,\n pass as arguments:\n1. Project name\n2. Executable name\n3. Executable source file\n4. Path to vcpkg.cmake\n5. List of libraries separated with spaces (empty string if none...)\n"
 	exit 1
 fi
 
@@ -11,13 +11,16 @@ echo "Creating basic files for a CMAKE and VCPKG project in this directory :)"
 
 
 vcpkg new --application
-vcpkg add port vcpkg-cmake
-vcpkg add port vcpkg-cmake-config
+vcpkg add port fmt vcpkg-cmake vcpkg-cmake-config $5
 
 
 
 
-printf "cmake_minimum_required(VERSION 3.8)\nproject($1)\nadd_executable($2 $3)\n" > CMakeLists.txt
+printf "cmake_minimum_required(VERSION 3.8)\n
+	project($1)\n
+	find_package(fmt CONFIG REQUIRED)\n
+	add_executable($2 $3)\n
+	target_link_libraries($2 PRIVATE fmt::fmt)" > CMakeLists.txt
 
 printf "{\n\"version\":2,\n
 	\"configurePresets\": [\n
@@ -26,7 +29,7 @@ printf "{\n\"version\":2,\n
 	\"generator\":\"Ninja\",\n
 	\"binaryDir\":\"\${sourceDir}/build\",\n
 	\"cacheVariables\": {\n
-	\"CMAKE_TOOLCHAIN_FILE\":\"\$env{VCPKG_ROOT}\"\n
+	\"CMAKE_TOOLCHAIN_FILE\":\"$4\"\n
 	}\n
 	}\n
 	]\n
