@@ -1,0 +1,36 @@
+#!/usr/bin/bash
+
+if [ $# -ne 3 ]
+then
+	printf "To initiate your VCPKG and CMAKE basic project\nPlease, pass as arguments:\n1. Project name\n2. Executable name\n3. Executable source file\n"
+	exit 1
+fi
+
+
+echo "Creating basic files for a CMAKE and VCPKG project in this directory :)"
+
+
+vcpkg new --application
+vcpkg add port vcpkg-cmake
+vcpkg add port vcpkg-cmake-config
+
+
+
+
+printf "cmake_minimum_required(VERSION 3.8)\nproject($1)\nadd_executable($2 $3)\n" > CMakeLists.txt
+
+printf "{\n\"version\":2,\n
+	\"configurePresets\": [\n
+	{\n
+	\"name\":\"default\",\n
+	\"generator\":\"Ninja\",\n
+	\"binaryDir\":\"\${sourceDir}/build\",\n
+	\"cacheVariables\": {\n
+	\"CMAKE_TOOLCHAIN_FILE\":\"\$env{VCPKG_ROOT}\"\n
+	}\n
+	}\n
+	]\n
+	}\n" > CMakePresets.json
+
+
+cmake --preset=default
