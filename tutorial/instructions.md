@@ -3,15 +3,15 @@
 ## Before Starting, set up your commands:
 1. Install basic dependencies in the cmd: 
 
-    ```sudo apt install g++ cmake ninja-build git```
+       sudo apt install g++ cmake ninja-build git
 
 2. Clone VCPKG repo in a separate directory (please remember where you clone it) writing: 
 
-    ```git clone https://github.com/microsoft/vcpkg.git``` 
+       git clone https://github.com/microsoft/vcpkg.git 
 
 3. After that, to finish installing VCPKG, write:
 
-    ```cd vcpkg && ./bootstrap-vcpkg.sh```
+       cd vcpkg && ./bootstrap-vcpkg.sh
 
 4. When that is done, it is necessary to set up the path to VCPKG in your environment variables
 5. Then, while still in the environment variables, add the path to this repo's bin to access its commands
@@ -30,7 +30,7 @@ This command takes 5 parameters:
 
 It should look something like this:
 
-    ```cmake_vcpkg_init tutorialProj testExec test.cpp /path/to/vcpkg eigen3```
+    cmake_vcpkg_init tutorialProj testExec test.cpp /path/to/vcpkg eigen3
 
 2. After running the command with the structure above, many files should have been created in the directory! 
 All of them are needed for the project to be built using CMake and have access to the VCPKG libraries.
