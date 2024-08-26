@@ -36,6 +36,8 @@ It should look something like this:
 All of them are needed for the project to be built using CMake and have access to the VCPKG libraries.
 Now that the whole base for the project has been set up, run **cmake_build** to compile your project in the "build" directory
 
+       cmake_build
+
 3. Finally (if there were no errors along the way :D) run the executable with: **./build/testExec**
 
 If you see four weird numbers in a matrix, it means that the libraries were successfully installed and linked and the program
