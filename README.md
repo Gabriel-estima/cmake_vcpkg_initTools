@@ -2,7 +2,7 @@
 
 I was incredibly tired of having problems with c/c++ libraries...
 Therefore, I decided to make a basic way to initialize a simple CMAKE project 
-with the files needed to implement VCPKG library tools...
+with the files needed to implement VCPKG library tools.
 
 ## How to get started:
 
