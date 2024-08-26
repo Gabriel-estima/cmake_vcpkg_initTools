@@ -16,7 +16,7 @@
 4. When that is done, it is necessary to set up the path to VCPKG in your environment variables
 5. Then, while still in the environment variables, add the path to this repo's bin to access its commands
 
-**( <span style="color:red">WARNING:</span> This repo was designed to be used with linux distributions...)**
+**(WARNING: This repo was designed to be used with linux distributions...)**
 
 ## Basic Tutorial:
 In this tutorial you will find a "testDir" directory that contains a basic c++ file that depends on the linear algebra library "eigen3". However, without having it installed, the file should throw errors in the compilation step... so we need a way to install the dependencies with the tools from this repo :D
