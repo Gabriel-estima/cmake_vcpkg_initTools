@@ -1,3 +1,7 @@
 #!/usr/bin/bash
 cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_BUILD_TYPE=Release -B build
+
+ls
+echo "Configs done, now building..."
+
 cmake --build build
