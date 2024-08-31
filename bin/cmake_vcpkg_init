@@ -10,16 +10,25 @@ fi
 echo "Creating basic files for a CMAKE and VCPKG project in this directory :)"
 
 
+## creating src folder
+mkdir src
+## creating base cpp file
+printf "#include <iostream>\nint main(){\n    std::cout << \"Program built!\"<<std::endl;\n    return 0;\n}\n" > ./src/$3 
+
+
+
+
+
+
 vcpkg new --application
 vcpkg add port fmt vcpkg-cmake vcpkg-cmake-config $5
-
-printf "#include <iostream>\nint main(){\n    std::cout << \"Program built!\"<<std::endl;\n    return 0;\n}\n" > $3 
 
 
 printf "cmake_minimum_required(VERSION 3.8)\n
 	project($1)\n
 	find_package(fmt CONFIG REQUIRED)\n
-	add_executable($2 $3)\n
+	file(GLOB_RECURSE SOURCES \"src/*.cpp\" \"src/*.h\" \"src/*.hpp\")\n
+	add_executable($2 \${SOURCES})\n
 	target_link_libraries($2 PRIVATE fmt::fmt)" > CMakeLists.txt
 
 printf "{\n\"version\":2,\n
